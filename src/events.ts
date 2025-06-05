@@ -7,7 +7,6 @@ function toggleAuxiliaryBar() {
   if (!isEnabled() || !vscode.window.visibleTextEditors?.length)
     return
 
-  vscode.window.showInformationMessage(`check editor: ${vscode.window.visibleTextEditors?.length}`)
   if (vscode.window.visibleTextEditors?.length > 1) {
     vscode.commands.executeCommand('workbench.action.closeAuxiliaryBar')
     isAutoHidden = true
