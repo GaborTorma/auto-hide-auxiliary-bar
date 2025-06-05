@@ -1,8 +1,12 @@
 import { defineExtension } from 'reactive-vscode'
-import { window } from 'vscode'
+import { registerCommands } from './commands'
+import { registerEvents } from './events'
+import { createStatusBarItems } from './items'
 
-const { activate, deactivate } = defineExtension(() => {
-  window.showInformationMessage('Hello')
+export const { activate, deactivate } = defineExtension((context) => {
+  registerCommands()
+
+  createStatusBarItems()
+
+  registerEvents(context)
 })
-
-export { activate, deactivate }
