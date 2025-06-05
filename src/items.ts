@@ -5,7 +5,7 @@ import { isEnabled } from './settings'
 function createToggleAuxiliaryBarStatusBarItem() {
   const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 1)
   statusBarItem.command = 'workbench.action.toggleAuxiliaryBar'
-  statusBarItem.tooltip = 'Toggle AuxiliaryBar'
+  statusBarItem.tooltip = 'Toggle Auxiliary Bar'
   statusBarItem.text = `$(list-selection)`
   statusBarItem.show()
 }
@@ -19,7 +19,7 @@ function getToggleEnableFeatureStatusBarText() {
 function createToggleEnableFeatureStatusBarItem() {
   const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 2)
   statusBarItem.command = COMMAND_NAME
-  statusBarItem.tooltip = 'Toggle Auto Hide AuxiliaryBar'
+  statusBarItem.tooltip = 'Toggle Auto Hide Auxiliary Bar'
   statusBarItem.text = getToggleEnableFeatureStatusBarText()
   statusBarItem.show()
 
